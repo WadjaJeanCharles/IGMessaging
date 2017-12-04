@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Upload Result</h1>
+	<p th:text="${connectionConfiguration.message == null ? 'Upload Success' : connectionConfiguration.message}"/>
+    <p th:text="'Upload Broker: ' + ${connectionConfiguration.brokerUri}" />
+    <p th:text="'User: ' + ${connectionConfiguration.userName}" />
+    <p th:text="'File Path: ' + ${connectionConfiguration.filePath}" />
+    <a href="/upload">Back to upload Page</a>
+</body>
+</html>

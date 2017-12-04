@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload an XML File</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/upload}" th:object="${uploadConf}" method="post">
+    	<p>Broker URI: <input type="text" th:field="*{brokerUri}" /></p>
+    	<p>Destination: <input type="text" th:field="*{destination}" /></p>
+        <p>User Name: <input type="text" th:field="*{userName}" /></p>
+        <p>User Password: <input type="text" th:field="*{password}" /></p>
+        <p>File Path: <input type="text" th:field="*{filePath}" /></p>
+        <p>Upload To Topic: <input type="checkbox" th:field="*{isTopic}" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+</body>
+</html>
